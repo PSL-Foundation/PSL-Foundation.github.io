@@ -16,6 +16,8 @@ title: PSL Foundation
 navbar-links:
   About:
     - People: "people"
+    - Legal Documents: "legal"
+  Donate: "donate"
 
 
 # --- Logo --- #
@@ -91,7 +93,7 @@ feed_show_tags: true
 post_search: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "PSL,Foundation,nonprofit,PSL-Foundation,open-source,public-policy"
+#keywords: "PSL,Foundation,nonprofit,PSL-Foundation,open-source,public-policy, Policy-Simulation-Library"
 
 # --- Colours / background image --- #
 
