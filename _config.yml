@@ -16,6 +16,7 @@ title: PSL Foundation
 navbar-links:
   About:
     - People: "people"
+    - Sponsored Projects: "sponsored_projects"
     - Legal Documents: "legal"
   Donate: "donate"
 
