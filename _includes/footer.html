@@ -1,41 +1,72 @@
 <footer>
   <div class="container-md beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-      {% include social-networks-links.html %}
-      {% if page.footer-extra %}
-        <div class="footer-custom-content">
-          {% for file in page.footer-extra %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-      <p class="copyright text-muted">
-      {% if site.author %}
-        {{ site.author }}
-        &nbsp;&bull;&nbsp;
-      {% endif %}
-      {{ site.time | date: '%Y' }}
 
-      {% if site.url-pretty %}
-        &nbsp;&bull;&nbsp;
-        <span class="author-site">
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-        </span>
-      {% endif %}
+    <!-- Main footer columns -->
+    <div class="row footer-cols">
 
-      {% if site.matomo %}
-        {% if site.matomo.opt-out %}
-          &nbsp;&bull;&nbsp;
-          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+      <!-- Col 1: Org description + social icons -->
+      <div class="col-lg-4 col-md-6 footer-col-org">
+        <p class="footer-org-name">PSL Foundation</p>
+        <p class="footer-org-desc">
+          Supporting open-source ecosystems for reproducible, transparent
+          analysis of public policy.
+        </p>
+        {% include social-networks-links.html %}
+      </div>
+
+      <!-- Col 2: Site navigation -->
+      <div class="col-lg-3 col-md-6 offset-lg-1 footer-col-nav">
+        <p class="footer-col-heading">Organization</p>
+        <ul class="footer-nav-list">
+          <li><a class="footer-nav-link" href="/people">Board of Directors</a></li>
+          <li><a class="footer-nav-link" href="/sponsored_projects">Sponsored Projects</a></li>
+          <li><a class="footer-nav-link" href="/legal">Legal Documents</a></li>
+          <li><a class="footer-nav-link" href="/donate">Donate</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Support CTA -->
+      <div class="col-lg-3 col-md-12 offset-lg-1 footer-col-donate">
+        <p class="footer-col-heading">Support Us</p>
+        <p class="footer-org-desc">
+          PSL Foundation is a 501(c)(3) public charity. Donations are
+          tax-deductible to the extent provided by U.S. law.
+        </p>
+        <a href="/donate" class="footer-donate-btn">Donate Today</a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar: copyright -->
+    <div class="row footer-bottom">
+      <div class="col-12 text-center">
+        {% if page.footer-extra %}
+          <div class="footer-custom-content">
+            {% for file in page.footer-extra %}
+              {% include {{ file }} %}
+            {% endfor %}
+          </div>
         {% endif %}
-      {% endif%}
-      </p>
-      {% unless site.remove-ads %}<p class="theme-by text-muted">
-        Powered by
-        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
-      </p>{% endunless %}
+        <p class="copyright text-muted">
+          &copy; {{ site.time | date: '%Y' }} PSL Foundation
+          {% if site.url-pretty %}
+            &nbsp;&bull;&nbsp;
+            <span class="author-site">
+              <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+            </span>
+          {% endif %}
+          {% if site.matomo %}{% if site.matomo.opt-out %}
+            &nbsp;&bull;&nbsp;
+            <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+          {% endif %}{% endif %}
+        </p>
+        {% unless site.remove-ads %}
+        <p class="theme-by text-muted">
+          Powered by <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+        </p>
+        {% endunless %}
       </div>
     </div>
+
   </div>
 </footer>
