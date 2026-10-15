@@ -45,6 +45,17 @@ subtitle:
 
   <div class="project-card">
     <div class="project-card-img-wrap">
+      <img src="/assets/img/axiom-full-w350-gradient.svg" alt="The Axiom Foundation">
+    </div>
+    <h3>The Axiom Foundation</h3>
+    <p>Open, machine-readable encodings of statutes, regulations, and policy
+    rules as cited, time-aware code that anyone can run, audit, or reform.</p>
+    <a href="https://axiom.org" class="project-card-link"
+       target="_blank" rel="noopener">Visit project &rarr;</a>
+  </div>
+
+  <div class="project-card">
+    <div class="project-card-img-wrap">
       <img src="/assets/img/qe-logo.png" alt="QuantEcon">
     </div>
     <h3>QuantEcon</h3>
