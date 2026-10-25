@@ -76,4 +76,15 @@ subtitle:
        target="_blank" rel="noopener">Visit project &rarr;</a>
   </div>
 
+  <div class="project-card">
+    <div class="project-card-img-wrap">
+      <img src="/assets/img/OpenUtilities_logo.png" alt="OpenUtilities">
+    </div>
+    <h3>OpenUtilities</h3>
+    <p>Unified, open datasets of utility prices across the country, starting with
+    water, so policymakers and residents can see what utilities actually cost.</p>
+    <a href="https://openutilities.org" class="project-card-link"
+       target="_blank" rel="noopener">Visit project &rarr;</a>
+  </div>
+
 </div>
